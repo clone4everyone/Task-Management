@@ -1,9 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import sequelize from './config/database.js';
-import authRoutes from './routes/auth.js';
-import taskRoutes from './routes/tasks.js';
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const sequelize = require('./config/database.js');
+const authRoutes = require('./routes/auth.js');
+const taskRoutes = require('./routes/tasks.js');
+
 
 dotenv.config();
 

@@ -1,6 +1,6 @@
-import { DataTypes } from 'sequelize';
-import sequelize from '../config/database.js';
-import User from './User.js';
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database.js');
+const User = require('./User.js');
 
 const Task = sequelize.define('Task', {
   id: {
@@ -32,4 +32,4 @@ const Task = sequelize.define('Task', {
 User.hasMany(Task, { foreignKey: 'userId' });
 Task.belongsTo(User, { foreignKey: 'userId' });
 
-export default Task;
+module.exports = Task;
